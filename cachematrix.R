@@ -1,7 +1,7 @@
-## Put comments here that give an overall description of what your
-## functions do
-
-## Write a short comment describing this function
+## This function returns a special "matrix", which is really a list 
+## containing functions to get and set the values of a real matrix
+## and get or set the calculated inverse / solved value of a matrix
+## in O(1)
 
 makeCacheMatrix <- function(x = matrix()) {
     ## cache initialisation
@@ -29,7 +29,9 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## This function tries to get the stored or cached value. If the returned
+## solved value is NULL, the function gets the data for the matrix, calculates
+## the inverse of the matrix and saves the solved / inverse matrix in the cache
 
 cacheSolve <- function(x, ...) {
     ## try to get the stored Value from Cache
